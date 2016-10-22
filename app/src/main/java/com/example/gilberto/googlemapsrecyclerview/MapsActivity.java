@@ -13,8 +13,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
-    private static String PLACE_EXTRA_KEY = "guatever jeejjejeejejexdxd";
-    private GoogleMap mMap;
+    public static String PLACE_EXTRA_KEY = "guatever jeejjejeejejexdxd";
+    public GoogleMap mMap;
     private Place mPlace;
     public static void start(Activity activity, Place place){
         Intent intent = new Intent(activity, MapsActivity.class);
@@ -47,7 +47,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(mPlace.getLongitud(), mPlace.getLatitud());
+        LatLng sydney = new LatLng(mPlace.getLatitud(), mPlace.getLongitud());
         mMap.addMarker(new MarkerOptions().position(sydney).title(mPlace.getName()));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 15));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
