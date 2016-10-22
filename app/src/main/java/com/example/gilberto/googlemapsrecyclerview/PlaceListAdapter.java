@@ -1,5 +1,6 @@
 package com.example.gilberto.googlemapsrecyclerview;
 
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,7 +38,7 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.View
         String name = place.getName() ;
         holder.titleTextView.setText(name);
         holder.latLong.setText("longitud es: "+ longitud + " "+ "latitud es: "+ latitud);
-        holder.titleTextView.setOnClickListener(new View.OnClickListener() {
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mListClickElement.onItemClick(place);
@@ -53,10 +54,12 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.View
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView titleTextView;
         TextView latLong;
+        CardView cardView;
         public ViewHolder(View itemView) {
             super(itemView);
             titleTextView = (TextView) itemView.findViewById(R.id.place_title);
             latLong = (TextView) itemView.findViewById(R.id.longLat);
+            cardView = (CardView) itemView.findViewById(R.id.card_view);
 
         }
 

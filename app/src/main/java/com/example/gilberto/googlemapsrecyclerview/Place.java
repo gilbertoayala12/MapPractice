@@ -3,13 +3,39 @@ package com.example.gilberto.googlemapsrecyclerview;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Gilberto on 15/10/2016.
  */
 public class Place implements Parcelable{
+    @SerializedName("name")
     private String name;
+    @SerializedName("long")
     private double longitud;
+    @SerializedName("lat")
     private double latitud;
+    @SerializedName("image_url")
+    private String imageUrl;
+    @SerializedName("ranking")
+    private int ranking;
+
+
+    public int getRanking() {
+        return ranking;
+    }
+
+    public void setRanking(int ranking) {
+        this.ranking = ranking;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 
     public Place(String name, double longitud, double latitud) {
         this.name = name;

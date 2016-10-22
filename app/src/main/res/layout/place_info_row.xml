@@ -33,8 +33,8 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:fontFamily="monospace"
-        android:textSize="35dp"
-        android:gravity="right"
+        android:textSize="25dp"
+        android:gravity="center"
         />
     <TextView
         android:layout_width="match_parent"
@@ -43,7 +43,7 @@
         android:textAlignment="center"
 
         android:textColor="#ffffff"
-        android:textSize="35dp"
+        android:textSize="15dp"
 
         android:gravity="left"
         android:textStyle="italic"
