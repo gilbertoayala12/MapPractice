@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -35,11 +36,12 @@ public class DetailPlaceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         View v = inflater.inflate(R.layout.fragment_detail_place, container, false);
 
         ImageView placeImageView =(ImageView) v.findViewById(R.id.place_image_view);
         TextView PlaceNameTextView = (TextView) v.findViewById(R.id.place_name_attribute);
-        TextView PlaceRankingTextView = (TextView) v.findViewById(R.id.place_ranking_attribute);
+        RatingBar PlaceRankingTextView = (RatingBar) v.findViewById(R.id.place_ranking_attribute);
         Button mapButton = (Button) v.findViewById(R.id.map_button);
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +51,9 @@ public class DetailPlaceFragment extends Fragment {
         });
         Picasso.with(getActivity()).load(mPlace.getImageUrl()).into(placeImageView);
         PlaceNameTextView.setText(mPlace.getName());
-        PlaceRankingTextView.setText(String.valueOf(mPlace.getRanking()));
+        //PlaceRankingTextView.setText(String.valueOf(mPlace.getRanking()));
+        int ranking = Integer.parseInt(String.valueOf(mPlace.getRanking()));
+        PlaceRankingTextView.setRating(ranking);
 
         return v;
     }

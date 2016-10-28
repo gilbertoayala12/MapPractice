@@ -26,8 +26,14 @@
         style="@style/header_text"
 
         />
-    <TextView
+    <RatingBar
         android:id="@+id/place_ranking_attribute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:isIndicator="true"
+        android:progressTint="#3F51B5"
+
         style="@style/attribute_text"
 
         />
