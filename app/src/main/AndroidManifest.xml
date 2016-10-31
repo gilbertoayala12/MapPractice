@@ -16,11 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".PlaceListActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -41,7 +37,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.gilberto.googlemapsrecyclerview.PlaceListActivity" />
         </activity>
-        <activity android:name=".DetailPlaceActivity"></activity>
+        <activity android:name=".DetailPlaceActivity"
+                  android:theme="@style/NoActionBarAppTheme"
+            />
+        <activity android:name=".GoogleSignInActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

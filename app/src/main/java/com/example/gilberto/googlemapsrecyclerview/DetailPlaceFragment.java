@@ -4,6 +4,8 @@ import android.content.Context;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,10 +41,11 @@ public class DetailPlaceFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_detail_place, container, false);
 
-        ImageView placeImageView =(ImageView) v.findViewById(R.id.place_image_view);
+        ImageView placeImageView =(ImageView) v.findViewById(R.id.place_imageview);
         TextView PlaceNameTextView = (TextView) v.findViewById(R.id.place_name_attribute);
         RatingBar PlaceRankingTextView = (RatingBar) v.findViewById(R.id.place_ranking_attribute);
-        Button mapButton = (Button) v.findViewById(R.id.map_button);
+        FloatingActionButton mapButton = (FloatingActionButton) v.findViewById(R.id.map_button);
+        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) v.findViewById(R.id.collapsing_toolbar);
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +57,7 @@ public class DetailPlaceFragment extends Fragment {
         //PlaceRankingTextView.setText(String.valueOf(mPlace.getRanking()));
         int ranking = Integer.parseInt(String.valueOf(mPlace.getRanking()));
         PlaceRankingTextView.setRating(ranking);
+        collapsingToolbarLayout.setTitle(mPlace.getName());
 
         return v;
     }

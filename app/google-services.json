@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1033119453440",
+    "project_id": "mappractice-bec5d"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033119453440:android:bd8455fb62ad2071",
+        "android_client_info": {
+          "package_name": "com.example.gilberto.googlemapsrecyclerview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033119453440-1hjt9a0gfo7mcbp8km7l9t8s3o16kr40.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gilberto.googlemapsrecyclerview",
+            "certificate_hash": "4F4DEF523AFE4C93DD0E808F70AD59704B470522"
+          }
+        },
+        {
+          "client_id": "1033119453440-8im72i28110efhs47ljtfo52lr3b5m12.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOSHhfqm2chVx5LwcG1TRnMnhlSmCjwfY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
